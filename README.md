@@ -2,6 +2,7 @@
 Liturgical data for the church year (calendar) of the Ethiopian Evangelical Church Mekane Yesus.
 
 Data is taken from the official liturgy of the EECMY: https://ethiopiangospelmusic.net/src/amharic-my-liturgy/
+
 Easter dates are pre-calculated and taken from: https://www.timeanddate.com/holidays/ethiopia/easter-sunday
 
 ## Issues
