@@ -11,3 +11,4 @@ Analyzing the printed calendars of the previous years there seem to be some ambi
 - it is unclear (keeps changing) whether there are 3 Sundays before lent or only 2
 - reformation day was not always included
 - it is unclear which one takes precedence: last Sunday of the year VS. nth Sunday after Trinity
+- same ambiguity for New Year when it falls on a Sunday
