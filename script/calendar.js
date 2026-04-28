@@ -59,10 +59,10 @@ function getYear (year, options) {
   options = Object.assign({
     lastSunday: true,
     thirdBeforeLent: true,
-    reformationDay: true,
-    correctYear: true
-    // reformationSunday: false,  // reformation over Sunday ?
-    // newyearSunday: false,      // newyear over Sunday ?
+    reformationSunday: false, // reformation over Sunday ?
+    newyearSunday: false,    // newyear over Sunday ?
+    wrapSeries: false,
+    additional: false
   }, options);
   var newYear = dateUtils.fromEthiopian(year, 1, 1);
   var nextYear = dateUtils.fromEthiopian(year + 1, 1, 1);
@@ -71,23 +71,32 @@ function getYear (year, options) {
   var days = new Array(7 * Math.ceil((offset + yearLength) / 7)).fill('');
   var christmas = dateUtils.fromWestern(year + 8, 1, 7);
   var advent1 = dateUtils.addDays(christmas, -3 * 7 - (christmas.getUTCDay() || 7))
-  function addDay (date, name, noOverwrite) {
-    var cycle = 1 + (year - (options.correctYear ? 1 + (date < advent1) : (date < newYear) + (date < nextYear))) % 4;
+  function addDay (date, name, overwrite) {
+    var cycle = 1 + (year - (options.wrapSeries ? 1 + (date < advent1) : (date < newYear) + (date < nextYear))) % 4;
     var index = offset + dateUtils.diffDays(newYear, date);
     if (index < 0 || index >= days.length) return;
-    // if (noOverwrite && days[index]) return;
-    if (!days[index]) {
-      days[index] = '';
+    // if (!overwrite && days[index]) return;
+    if (!days[index] || overwrite) {
+      days[index] = cycle + ':';
     } else {
       days[index] += '|';
     }
-    days[index] += cycle + ':' + name;
+    days[index] += name;
     // console.log(date, name);
   }
   var cycle = 1 + (year - 2) % 4;
   var lastEaster = getEaster(year - 1);
   var beforeJudgment = dateUtils.addDays(advent1, -14);
   var lastTrinity = dateUtils.addDays(lastEaster, 70);
+  if (options.newyearSunday) {
+    addDay(newYear, 'newyear');
+  }
+  // Supposedly on Tiqimt 21 or the following Sunday (?)
+  // Yemisrach Dimts always uses the Western date
+  var reformation = dateUtils.fromWestern(year + 7, 10, 31)
+  if (options.reformationSunday) {
+    addDay(reformation, 'reformation');
+  }
   for (var n = 1; n <= 23; n++) {
     var trinity = dateUtils.addDays(lastTrinity, n * 7);
     if (trinity >= beforeJudgment) break;
@@ -96,7 +105,6 @@ function getYear (year, options) {
   if (options.lastSunday && offset > 0) {
     addDay(dateUtils.addDays(newYear, -offset), 'last');
   }
-  addDay(newYear, 'newyear');
   addDay(dateUtils.fromEthiopian(year, 1, 17), 'mesqel');
   addDay(beforeJudgment, 'judgment-1');
   addDay(dateUtils.addDays(advent1, -7), 'judgment');
@@ -114,13 +122,11 @@ function getYear (year, options) {
   }
   var thisEaster = getEaster(year);
   var beforeLent = dateUtils.addDays(thisEaster, -8 * 7);
-  if (options.thirdBeforeLent) {
-    addDay(dateUtils.addDays(beforeLent, -14), 'lent-3');
-  }
-  addDay(dateUtils.addDays(beforeLent, -7), 'lent-2');
-  addDay(beforeLent, 'lent-1');
+  addDay(dateUtils.addDays(beforeLent, -14), 'lent-3', options.thirdBeforeLent);
+  addDay(dateUtils.addDays(beforeLent, -7), 'lent-2', true);
+  addDay(beforeLent, 'lent-1', true);
   for (var n = 1; n <= 7; n++) {
-    addDay(dateUtils.addDays(beforeLent, n * 7), 'lent' + n);
+    addDay(dateUtils.addDays(beforeLent, n * 7), 'lent' + n, true);
   }
   addDay(dateUtils.addDays(thisEaster, -6), 'holy_mo');
   addDay(dateUtils.addDays(thisEaster, -5), 'holy_tu');
@@ -143,15 +149,15 @@ function getYear (year, options) {
   for (var n = 1; n <= 23; n++) {
     addDay(dateUtils.addDays(thisTrinity, n * 7), 'trinity+' + n);
   }
-  if (options.lastSunday) {
-    addDay(dateUtils.addDays(nextYear, -(nextYear.getUTCDay() || 7)), 'last');
+  addDay(dateUtils.addDays(nextYear, -(nextYear.getUTCDay() || 7)), 'last', options.lastSunday);
+  if (!options.newyearSunday) {
+    addDay(newYear, 'newyear');
+  }
+  if (!options.reformationSunday) {
+    addDay(reformation, 'reformation');
   }
   addDay(nextYear, 'newyear');
-  if (options.reformationDay) {
-    // Supposedly on Tiqimt 21 or the following Sunday (?)
-    // Yemisrach Dimts always uses the Western date
-    addDay(dateUtils.fromWestern(year + 7, 10, 31), 'reformation');
-  }
+
   if (options.additional) {
     // Annunciation is Megabit 29 or the following Sunday. Ambiguous?
     var megabit29 = dateUtils.fromEthiopian(year, 7, 29);
@@ -174,26 +180,28 @@ function getYearList (year) {
   const list = []
   for (let i = 0; i < data.days.length; i++) {
     if (!data.days[i].length) continue
-    const alts = data.days[i].split('|')
-    const row = data.days[i].split('|')[0].split(':')
-    const cycle = +row[0]
-    const id = row[1]
+    const series = +data.days[i][0]
+    const alts = data.days[i].slice(2).split('|')
+    const id = alts.shift()
     const dateWestern = dateUtils.fromEthiopian(year, 1, 1 + i - data.offset)
     const date = dateUtils.toEthiopian(dateWestern)
     if (date.year != year) continue
     const dateEthiopian = [date.year, date.month, date.date].map(n => n.toString().padStart(2, '0')).join('-')
-    list.push({
+    const item = {
       id,
-      series: cycle,
+      series,
       dateGregorian: dateWestern.toJSON().slice(0, 10),
       dateEthiopian
-    })
+    }
+    if (alts.length) {
+      item.alt = alts[0] // in theory there could be more than one
+    }
+    list.push(item)
   }
   return list
 }
 
 const { writeFileSync } = require('fs')
-
 for (let year = 2018; year <= 2030; year++) {
   writeFileSync('../year_' + year + '.json', JSON.stringify(getYearList(year), null, 2))
 }
