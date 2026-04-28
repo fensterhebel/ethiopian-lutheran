@@ -2,6 +2,7 @@
 Liturgical data for the church year (calendar) of the Ethiopian Evangelical Church Mekane Yesus.
 
 Data is taken from the official liturgy of the EECMY: https://ethiopiangospelmusic.net/src/amharic-my-liturgy/
+Easter dates are pre-calculated and taken from: https://www.timeanddate.com/holidays/ethiopia/easter-sunday
 
 ## Issues
 Although the data is outlined in the liturgy book, most people rely on the printed calendar that is published by Yemisrach Dimts every year. Ato Abebe was the one doing the calculations and assigning an additional single verse for all days of the year. He retired in 2025 (Gregorian year).
