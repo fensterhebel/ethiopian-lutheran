@@ -1,0 +1,386 @@
+[
+  {
+    "id": "newyear",
+    "series": 3,
+    "dateGregorian": "2035-09-12",
+    "dateEthiopian": "2028-01-01"
+  },
+  {
+    "id": "trinity+10",
+    "series": 3,
+    "dateGregorian": "2035-09-16",
+    "dateEthiopian": "2028-01-05"
+  },
+  {
+    "id": "trinity+11",
+    "series": 3,
+    "dateGregorian": "2035-09-23",
+    "dateEthiopian": "2028-01-12"
+  },
+  {
+    "id": "mesqel",
+    "series": 3,
+    "dateGregorian": "2035-09-28",
+    "dateEthiopian": "2028-01-17"
+  },
+  {
+    "id": "trinity+12",
+    "series": 3,
+    "dateGregorian": "2035-09-30",
+    "dateEthiopian": "2028-01-19"
+  },
+  {
+    "id": "trinity+13",
+    "series": 3,
+    "dateGregorian": "2035-10-07",
+    "dateEthiopian": "2028-01-26"
+  },
+  {
+    "id": "trinity+14",
+    "series": 3,
+    "dateGregorian": "2035-10-14",
+    "dateEthiopian": "2028-02-03"
+  },
+  {
+    "id": "trinity+15",
+    "series": 3,
+    "dateGregorian": "2035-10-21",
+    "dateEthiopian": "2028-02-10"
+  },
+  {
+    "id": "trinity+16",
+    "series": 3,
+    "dateGregorian": "2035-10-28",
+    "dateEthiopian": "2028-02-17"
+  },
+  {
+    "id": "reformation",
+    "series": 3,
+    "dateGregorian": "2035-10-31",
+    "dateEthiopian": "2028-02-20"
+  },
+  {
+    "id": "trinity+17",
+    "series": 3,
+    "dateGregorian": "2035-11-04",
+    "dateEthiopian": "2028-02-24"
+  },
+  {
+    "id": "trinity+18",
+    "series": 3,
+    "dateGregorian": "2035-11-11",
+    "dateEthiopian": "2028-03-01"
+  },
+  {
+    "id": "trinity+19",
+    "series": 3,
+    "dateGregorian": "2035-11-18",
+    "dateEthiopian": "2028-03-08"
+  },
+  {
+    "id": "trinity+20",
+    "series": 3,
+    "dateGregorian": "2035-11-25",
+    "dateEthiopian": "2028-03-15"
+  },
+  {
+    "id": "judgment-1",
+    "series": 3,
+    "dateGregorian": "2035-12-02",
+    "dateEthiopian": "2028-03-22"
+  },
+  {
+    "id": "judgment",
+    "series": 3,
+    "dateGregorian": "2035-12-09",
+    "dateEthiopian": "2028-03-29"
+  },
+  {
+    "id": "advent1",
+    "series": 4,
+    "dateGregorian": "2035-12-16",
+    "dateEthiopian": "2028-04-06"
+  },
+  {
+    "id": "advent2",
+    "series": 4,
+    "dateGregorian": "2035-12-23",
+    "dateEthiopian": "2028-04-13"
+  },
+  {
+    "id": "advent3",
+    "series": 4,
+    "dateGregorian": "2035-12-30",
+    "dateEthiopian": "2028-04-20"
+  },
+  {
+    "id": "advent4",
+    "series": 4,
+    "dateGregorian": "2036-01-06",
+    "dateEthiopian": "2028-04-27"
+  },
+  {
+    "id": "christmas",
+    "series": 4,
+    "dateGregorian": "2036-01-07",
+    "dateEthiopian": "2028-04-28"
+  },
+  {
+    "id": "christmas+1",
+    "series": 4,
+    "dateGregorian": "2036-01-13",
+    "dateEthiopian": "2028-05-04"
+  },
+  {
+    "id": "christmas+2",
+    "series": 4,
+    "dateGregorian": "2036-01-20",
+    "dateEthiopian": "2028-05-11"
+  },
+  {
+    "id": "epiphany+1",
+    "series": 4,
+    "dateGregorian": "2036-01-27",
+    "dateEthiopian": "2028-05-18"
+  },
+  {
+    "id": "epiphany+2",
+    "series": 4,
+    "dateGregorian": "2036-02-03",
+    "dateEthiopian": "2028-05-25"
+  },
+  {
+    "id": "epiphany+3",
+    "series": 4,
+    "dateGregorian": "2036-02-10",
+    "dateEthiopian": "2028-06-02"
+  },
+  {
+    "id": "epiphany+4",
+    "series": 4,
+    "dateGregorian": "2036-02-17",
+    "dateEthiopian": "2028-06-09"
+  },
+  {
+    "id": "epiphany+5",
+    "series": 4,
+    "dateGregorian": "2036-02-24",
+    "dateEthiopian": "2028-06-16"
+  },
+  {
+    "id": "epiphany+6",
+    "series": 4,
+    "dateGregorian": "2036-03-02",
+    "dateEthiopian": "2028-06-23"
+  },
+  {
+    "id": "lent2",
+    "series": 4,
+    "dateGregorian": "2036-03-09",
+    "dateEthiopian": "2028-06-30"
+  },
+  {
+    "id": "lent3",
+    "series": 4,
+    "dateGregorian": "2036-03-16",
+    "dateEthiopian": "2028-07-07"
+  },
+  {
+    "id": "lent4",
+    "series": 4,
+    "dateGregorian": "2036-03-23",
+    "dateEthiopian": "2028-07-14"
+  },
+  {
+    "id": "lent5",
+    "series": 4,
+    "dateGregorian": "2036-03-30",
+    "dateEthiopian": "2028-07-21"
+  },
+  {
+    "id": "lent6",
+    "series": 4,
+    "dateGregorian": "2036-04-06",
+    "dateEthiopian": "2028-07-28"
+  },
+  {
+    "id": "lent7",
+    "series": 4,
+    "dateGregorian": "2036-04-13",
+    "dateEthiopian": "2028-08-05"
+  },
+  {
+    "id": "holy_mo",
+    "series": 4,
+    "dateGregorian": "2036-04-14",
+    "dateEthiopian": "2028-08-06"
+  },
+  {
+    "id": "holy_tu",
+    "series": 4,
+    "dateGregorian": "2036-04-15",
+    "dateEthiopian": "2028-08-07"
+  },
+  {
+    "id": "holy_we",
+    "series": 4,
+    "dateGregorian": "2036-04-16",
+    "dateEthiopian": "2028-08-08"
+  },
+  {
+    "id": "holy_th",
+    "series": 4,
+    "dateGregorian": "2036-04-17",
+    "dateEthiopian": "2028-08-09"
+  },
+  {
+    "id": "holy_fr",
+    "series": 4,
+    "dateGregorian": "2036-04-18",
+    "dateEthiopian": "2028-08-10"
+  },
+  {
+    "id": "holy_sa",
+    "series": 4,
+    "dateGregorian": "2036-04-19",
+    "dateEthiopian": "2028-08-11"
+  },
+  {
+    "id": "easter",
+    "series": 4,
+    "dateGregorian": "2036-04-20",
+    "dateEthiopian": "2028-08-12"
+  },
+  {
+    "id": "easter_mo",
+    "series": 4,
+    "dateGregorian": "2036-04-21",
+    "dateEthiopian": "2028-08-13"
+  },
+  {
+    "id": "easter+1",
+    "series": 4,
+    "dateGregorian": "2036-04-27",
+    "dateEthiopian": "2028-08-19"
+  },
+  {
+    "id": "easter+2",
+    "series": 4,
+    "dateGregorian": "2036-05-04",
+    "dateEthiopian": "2028-08-26"
+  },
+  {
+    "id": "easter+3",
+    "series": 4,
+    "dateGregorian": "2036-05-11",
+    "dateEthiopian": "2028-09-03"
+  },
+  {
+    "id": "easter+4",
+    "series": 4,
+    "dateGregorian": "2036-05-18",
+    "dateEthiopian": "2028-09-10"
+  },
+  {
+    "id": "easter+5",
+    "series": 4,
+    "dateGregorian": "2036-05-25",
+    "dateEthiopian": "2028-09-17"
+  },
+  {
+    "id": "ascension",
+    "series": 4,
+    "dateGregorian": "2036-05-29",
+    "dateEthiopian": "2028-09-21"
+  },
+  {
+    "id": "ascension+1",
+    "series": 4,
+    "dateGregorian": "2036-06-01",
+    "dateEthiopian": "2028-09-24"
+  },
+  {
+    "id": "pentecost",
+    "series": 4,
+    "dateGregorian": "2036-06-08",
+    "dateEthiopian": "2028-10-01"
+  },
+  {
+    "id": "pentecost+1",
+    "series": 4,
+    "dateGregorian": "2036-06-15",
+    "dateEthiopian": "2028-10-08"
+  },
+  {
+    "id": "pentecost+2",
+    "series": 4,
+    "dateGregorian": "2036-06-22",
+    "dateEthiopian": "2028-10-15"
+  },
+  {
+    "id": "trinity",
+    "series": 4,
+    "dateGregorian": "2036-06-29",
+    "dateEthiopian": "2028-10-22"
+  },
+  {
+    "id": "trinity+1",
+    "series": 4,
+    "dateGregorian": "2036-07-06",
+    "dateEthiopian": "2028-10-29"
+  },
+  {
+    "id": "trinity+2",
+    "series": 4,
+    "dateGregorian": "2036-07-13",
+    "dateEthiopian": "2028-11-06"
+  },
+  {
+    "id": "trinity+3",
+    "series": 4,
+    "dateGregorian": "2036-07-20",
+    "dateEthiopian": "2028-11-13"
+  },
+  {
+    "id": "trinity+4",
+    "series": 4,
+    "dateGregorian": "2036-07-27",
+    "dateEthiopian": "2028-11-20"
+  },
+  {
+    "id": "trinity+5",
+    "series": 4,
+    "dateGregorian": "2036-08-03",
+    "dateEthiopian": "2028-11-27"
+  },
+  {
+    "id": "trinity+6",
+    "series": 4,
+    "dateGregorian": "2036-08-10",
+    "dateEthiopian": "2028-12-04"
+  },
+  {
+    "id": "trinity+7",
+    "series": 4,
+    "dateGregorian": "2036-08-17",
+    "dateEthiopian": "2028-12-11"
+  },
+  {
+    "id": "trinity+8",
+    "series": 4,
+    "dateGregorian": "2036-08-24",
+    "dateEthiopian": "2028-12-18"
+  },
+  {
+    "id": "trinity+9",
+    "series": 4,
+    "dateGregorian": "2036-08-31",
+    "dateEthiopian": "2028-12-25"
+  },
+  {
+    "id": "trinity+10",
+    "series": 4,
+    "dateGregorian": "2036-09-07",
+    "dateEthiopian": "2028-13-02"
+  }
+]
