@@ -14,3 +14,4 @@ Analyzing the printed calendars of the previous years there seem to be some ambi
 - reformation day was not always included
 - it is unclear which one takes precedence: last Sunday of the year VS. nth Sunday after Trinity
 - same ambiguity for New Year when it falls on a Sunday
+- the Annunciation and Transfiguration were never included in the printed calendar
